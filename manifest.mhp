@@ -1,0 +1,7 @@
+return [
+    repository : `https://github.com/minimalist-php/list-compose`,
+    version : `2024.05.1`
+    modules : [
+        `https://cdn.jsdelivr.net/gh/minimalist-php/list-addition@2024.05.1/index.php`
+    ]
+]

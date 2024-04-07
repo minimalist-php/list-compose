@@ -1,0 +1,23 @@
+list_addition : module(`minimalist-php/list-addition`)
+
+return function (expressions) use (list_addition)
+
+    if list_length(expressions) = 0
+        throw exception(`list_compose: The list must not be empty`)
+
+    iteration : function (parameters) use (expressions)
+        entry : parameters[`entry`]
+        carry : parameters[`carry`]
+        last_expression : entry = list_length(expressions) - 1
+
+        if not last_expression
+
+            return expressions[entry + 1](carry)
+
+        return carry
+
+    return list_addition([
+        list : expressions
+        carry : expressions[0]
+        iteration : iteration
+    ])

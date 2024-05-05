@@ -41,7 +41,6 @@ return function ($expressions) use ($list_addition) {
         $last_expression = $entry === count($expressions) - 1;
 
         if (! $last_expression) {
-
             return $expressions[$entry + 1]($carry);
         };
         return $carry;
